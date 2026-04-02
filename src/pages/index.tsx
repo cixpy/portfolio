@@ -5,7 +5,7 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 
 // Importação da solução interna (o arquivo que você criou em src/data/raw.json)
-import homeData from "@/data/raw.json";
+import homeData from "@/pages/api/data/raw.json";
 
 interface HomeProps {
   home: {
