@@ -96,7 +96,7 @@
         {
             "slug": "pokedex",
             "name": "Pokédex",
-            "external": "https://cixayah.github.io/pokedex/",
+            "external": "https://cixpy.github.io/pokedex/",
             "repository": "https://github.com/Cixayah/pokedex",
             "image": {
                 "url": "https://picsum.photos/1600/900",
@@ -116,7 +116,7 @@
         {
             "slug": "auth-jwt",
             "name": "Auth JWT",
-            "external": "https://cixayah.github.io/html-jwt/",
+            "external": "https://cixpy.github.io/html-jwt/",
             "repository": "https://github.com/Cixayah/html-jwt",
             "image": {
                 "url": "https://picsum.photos/1600/900",
