@@ -26,7 +26,7 @@ export const Header = () => {
             className={`${roboto.className} bg-h-blue-900 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20`}
         >
             <Link href="/">
-                <Image src="/favicon.svg" width={100} height={100} alt="Ícone Favicon" />
+                <Image src="/favicon.svg" width={100} height={100} alt="Ícone Favicon" className="transition-transform duration-300 hover:scale-110" />
             </Link>
             <button className="p-1 md:hidden" onClick={openMenu}>
                 <MenuIcon className="fill-white w-10 h-10" />
