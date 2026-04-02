@@ -4,7 +4,8 @@ import { Project, AboutMe as TAboutMe } from "@/types/Home";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 
-const githubGist = 'https://gist.githubusercontent.com/Cixayah/289099fbcb021450eaea59eebcb2ad1d/raw/134407b70ba8d0d6edab259f59a0fc4a4014db90/home'
+// Importação da solução interna (o arquivo que você criou em src/data/raw.json)
+import homeData from "@/data/raw.json";
 
 interface HomeProps {
   home: {
@@ -14,9 +15,8 @@ interface HomeProps {
 }
 
 const Home = ({ home }: HomeProps) => {
-  const { projects, aboutMe } = home
-
-  // console.log(home);
+  // Desestruturação segura dos dados locais
+  const { projects, aboutMe } = home;
 
   return (
     <>
@@ -24,27 +24,35 @@ const Home = ({ home }: HomeProps) => {
         <title>Home | Cix</title>
         <meta name="description" content="Sou um dev full stack" />
       </Head>
-      <div className="py-12 px-6 md:pdx-32 space-y-10 md:space-y-28">
+
+      {/* Correção: 'pdx-32' alterado para 'px-32' 
+          Estrutura de espaçamento vertical e horizontal 
+      */}
+      <div className="py-12 px-6 md:px-32 space-y-10 md:space-y-28">
         <AboutMe aboutMe={aboutMe} />
         <Projects projects={projects} />
       </div>
     </>
   );
-}
+};
 
-const loadHome = async () => {
-  const res = await fetch(
-    githubGist
-  );
-  const home = await res.json();
-  return home
-}
-
+/**
+ * getStaticProps agora consome os dados internamente.
+ * Isso elimina a necessidade de APIs externas e melhora a velocidade de build.
+ */
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const home = await loadHome();
+  const transformedProjects = homeData.projects.map((project) => ({
+    ...project,
+    url: project.external,
+  }));
 
   return {
-    props: { home },
+    props: {
+      home: {
+        ...homeData,
+        projects: transformedProjects,
+      },
+    },
   };
 };
 

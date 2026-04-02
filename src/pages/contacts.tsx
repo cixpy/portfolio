@@ -30,8 +30,8 @@ const contacts = () => {
                     <li className="md:text-xl">
                         <span className="font-bold">GitHub</span>
                         <div className="flex gap-1 md:gap-3 items-center">
-                            <a href="https://github.com/cixayah" target="_blank" className="text-sm md:text-lg text-slate-300 underline truncate">
-                                https://github.com/cixayah
+                            <a href="https://github.com/cixpy" target="_blank" className="text-sm md:text-lg text-slate-300 underline truncate">
+                                https://github.com/cixpy
                             </a>
                         </div>
                     </li>

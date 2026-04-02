@@ -78,7 +78,7 @@
             },
             "experience": {
                 "default": "years of experience",
-                "bold": "2+"
+                "bold": "3+"
             }
         }
     },
@@ -86,8 +86,8 @@
         {
             "slug": "linktree",
             "name": "LinkTree",
-            "external": "https://ttvcixpy.vercel.app",
-            "repository": "https://github.com/cixpy/ttvcixpy",
+            "external": "https://ttvcixayah.vercel.app",
+            "repository": "https://github.com/Cixayah/ttvcixayah",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "A link tree, the main icon is a cat biting a Gengar plush"
@@ -96,10 +96,10 @@
         {
             "slug": "pokedex",
             "name": "Pokédex",
-            "external": "https://cixpy.github.io/pokedex/",
-            "repository": "https://github.com/cixpy/pokedex",
+            "external": "https://cixayah.github.io/pokedex/",
+            "repository": "https://github.com/Cixayah/pokedex",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczOjFe39PJuXPt1vrxbIExQj_4IcAfy-c3b_CVqBnbS7LR6m1JD1Nh2UYnQz4t0WRpT21rodmosctzSeqEyitfaGJNgWozKy8POstVJr7lgp5rOjawu0kasblcEGfa_7iWbQpxQmiwBySMtFk_s-DOxTkQ=w526-h704-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "Pokédex with Gengar"
             }
         },
@@ -107,17 +107,17 @@
             "slug": "todo-list",
             "name": "TODO List",
             "external": "https://cix.up.railway.app",
-            "repository": "https://github.com/cixpy/todo-list",
+            "repository": "https://github.com/Cixayah/todo-list",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczPGMe-3JPrMnw84I_tpqMf7myMPJTH4ejvFgrAYwh8xMxsosuPvlA56dZWTZrSfC-jroin8eagW4li56_60H6cTf0H1sg6X38GqBoHglDgfdlXRCH8sOieo3Ji_m7sj6TqgmwTxGWIEV5tyg0y8XmUX=w400-h434-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "TODO List Screenshot"
             }
         },
         {
             "slug": "auth-jwt",
             "name": "Auth JWT",
-            "external": "https://cixpy.github.io/html-jwt/",
-            "repository": "https://github.com/cixpy/html-jwt",
+            "external": "https://cixayah.github.io/html-jwt/",
+            "repository": "https://github.com/Cixayah/html-jwt",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "A Login with a white background and a form with email and password fields"
@@ -126,10 +126,10 @@
         {
             "slug": "hungar-bot-discord",
             "name": "Hungar - Discord Bot",
-            "external": "https://github.com/cixpy/Hungar",
-            "repository": "https://github.com/cixpy/Hungar",
+            "external": "https://github.com/Cixayah/Hungar",
+            "repository": "https://github.com/Cixayah/Hungar",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczN9ztE-DjykOS9quWvPCPgDlJHjxB8vtsmEzHGJWwN41OBUrQM-l64mVyKk_CguDZj-cPbk7e33MHS4uHNGjg1PyZHuZT8SHIdMoK35EVbBIfmQYvC3bfRMvVqh2H6tstUzTq-62vwXJ6DK-gvsbZgG=w362-h343-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "Hungar bot photo, with Gengar in black and without background"
             }
         },
@@ -137,19 +137,19 @@
             "slug": "my-expenses-flash",
             "name": "My Expenses - Flask",
             "external": "https://meus-gastos-two.vercel.app/",
-            "repository": "https://github.com/cixpy/meus-gastos",
+            "repository": "https://github.com/Cixayah/meus-gastos",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczN4IpdHij9AGb86fT4kAeOcSMpQ7rFf87a3jjAl5C6GT7ctabo8t5hjabry3Peq7KSkOSzlyqt-m4eG41-2BZW1fTyZx3Vim_LKXIVAspoWveJfImVvbzRNHE1l_xcvUickZMKg0LaTegjN-Hq0OpfJ=w626-h590-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "Interface with colorful theme, with description, value, and email fields"
             }
         },
         {
             "slug": "csharp-project",
             "name": "Crud in C# Windows Forms",
-            "external": "https://github.com/cixpy/cs-sales-control",
-            "repository": "https://github.com/cixpy/cs-sales-control",
+            "external": "https://github.com/Cixayah/cs-sales-control",
+            "repository": "https://github.com/Cixayah/cs-sales-control",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczPPG0D4pfGLCarqIMOLyCYM1AXW5FBJ-T9ALdJ0et9ty7E94IBYFV3LfqONR5DuSH57pcIMivDPHKW6abyfTEHOJQEb_nVJzpz74EAE6eIYM9JABrUFr-Tc6y2Eeu-WOxde8zfhoGFt9ls201G8Mq4B=w316-h320-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "Interface application, with a form with name, email, and phone fields"
             }
         },
@@ -157,9 +157,9 @@
             "slug": "gym-cix",
             "name": "Gym Cix - Website",
             "external": "https://gym-cix.vercel.app",
-            "repository": "https://github.com/cixpy/gym-cix",
+            "repository": "https://github.com/Cixayah/gym-cix",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczPuYznPdgAggDAliUUcn00zaFNC_zEU5jqOz-UpV7RHtG0TPgdosOUTmFw7zJFztY-EEmtIO7dvaKBq_cyPenwN35pWq-GHyXDHvONvt1L8mOWe8QDK4aa4Z5GYfWu2z8cVb8kth5sPbj-LUxt1WU7S=w500-h500-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "A website developed for a fictitious gym"
             }
         },
@@ -167,9 +167,9 @@
             "slug": "cixtema-customer-web-system",
             "name": "Cixtema - Customer Web System",
             "external": "https://cixtema.vercel.app",
-            "repository": "https://github.com/cixpy/cixtema",
+            "repository": "https://github.com/Cixayah/cixtema",
             "image": {
-                "url": "https://lh3.googleusercontent.com/pw/AP1GczNIfxsm3DDRGlUpOQY5Hc9wnhoU-9YEwOOLkLYtYlkY2qTb4Sh1q1WjdLyKE07GEZHGgW4_bRiNIPR0YZIA-zKrBbWxkjfWldPOu25ndJITPMl7w7HYuz4tztxv0WHZ7QenoR7S17XuD7RkUgl4AMwyQQ=w660-h645-s-no-gm?authuser=0",
+                "url": "https://picsum.photos/1600/900",
                 "alt": "A website developed for customer registrations"
             }
         }
