@@ -87,7 +87,7 @@
             "slug": "linktree",
             "name": "LinkTree",
             "external": "https://ttvcixayah.vercel.app",
-            "repository": "https://github.com/Cixayah/ttvcixayah",
+            "repository": "https://github.com/cixpy/ttvcixayah",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "A link tree, the main icon is a cat biting a Gengar plush"
@@ -97,7 +97,7 @@
             "slug": "pokedex",
             "name": "Pokédex",
             "external": "https://cixpy.github.io/pokedex/",
-            "repository": "https://github.com/Cixayah/pokedex",
+            "repository": "https://github.com/cixpy/pokedex",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "Pokédex with Gengar"
@@ -106,8 +106,8 @@
         {
             "slug": "todo-list",
             "name": "TODO List",
-            "external": "https://cix.up.railway.app",
-            "repository": "https://github.com/Cixayah/todo-list",
+            "external": "https://todolistmvc.vercel.app/",
+            "repository": "https://github.com/cixpy/todolistmvc",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "TODO List Screenshot"
@@ -117,7 +117,7 @@
             "slug": "auth-jwt",
             "name": "Auth JWT",
             "external": "https://cixpy.github.io/html-jwt/",
-            "repository": "https://github.com/Cixayah/html-jwt",
+            "repository": "https://github.com/cixpy/html-jwt",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "A Login with a white background and a form with email and password fields"
@@ -126,8 +126,8 @@
         {
             "slug": "hungar-bot-discord",
             "name": "Hungar - Discord Bot",
-            "external": "https://github.com/Cixayah/Hungar",
-            "repository": "https://github.com/Cixayah/Hungar",
+            "external": "https://github.com/cixpy/Hungar",
+            "repository": "https://github.com/cixpy/Hungar",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "Hungar bot photo, with Gengar in black and without background"
@@ -137,7 +137,7 @@
             "slug": "my-expenses-flash",
             "name": "My Expenses - Flask",
             "external": "https://meus-gastos-two.vercel.app/",
-            "repository": "https://github.com/Cixayah/meus-gastos",
+            "repository": "https://github.com/cixpy/meus-gastos",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "Interface with colorful theme, with description, value, and email fields"
@@ -146,8 +146,8 @@
         {
             "slug": "csharp-project",
             "name": "Crud in C# Windows Forms",
-            "external": "https://github.com/Cixayah/cs-sales-control",
-            "repository": "https://github.com/Cixayah/cs-sales-control",
+            "external": "https://github.com/cixpy/cs-sales-control",
+            "repository": "https://github.com/cixpy/cs-sales-control",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "Interface application, with a form with name, email, and phone fields"
@@ -157,7 +157,7 @@
             "slug": "gym-cix",
             "name": "Gym Cix - Website",
             "external": "https://gym-cix.vercel.app",
-            "repository": "https://github.com/Cixayah/gym-cix",
+            "repository": "https://github.com/cixpy/gym-cix",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "A website developed for a fictitious gym"
@@ -167,7 +167,7 @@
             "slug": "cixtema-customer-web-system",
             "name": "Cixtema - Customer Web System",
             "external": "https://cixtema.vercel.app",
-            "repository": "https://github.com/Cixayah/cixtema",
+            "repository": "https://github.com/cixpy/cixtema",
             "image": {
                 "url": "https://picsum.photos/1600/900",
                 "alt": "A website developed for customer registrations"
