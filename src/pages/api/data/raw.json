@@ -4,7 +4,7 @@
             "default": "Hello, I'm Gabriel",
             "bold": "Cix"
         },
-        "description": "Linux-inspired full-stack developer focused on TypeScript, Node.js, and Python.",
+        "description": "full-stack developer focused on TypeScript, Node.js, and Python.",
         "contact": {
             "link": "/contacts",
             "label": "Contact me"
