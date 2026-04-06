@@ -89,7 +89,7 @@
             "external": "https://ttvcixayah.vercel.app",
             "repository": "https://github.com/cixpy/ttvcixayah",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/6R3Lc07C/Screenshot-1.png",
                 "alt": "A link tree, the main icon is a cat biting a Gengar plush"
             }
         },
@@ -99,7 +99,7 @@
             "external": "https://cixpy.github.io/pokedex/",
             "repository": "https://github.com/cixpy/pokedex",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/ycfCGw4x/Screenshot-2.png",
                 "alt": "Pokédex with Gengar"
             }
         },
@@ -109,7 +109,7 @@
             "external": "https://todolistmvc.vercel.app/",
             "repository": "https://github.com/cixpy/todolistmvc",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/6VvQFcH/Screenshot-3.png",
                 "alt": "TODO List Screenshot"
             }
         },
@@ -119,7 +119,7 @@
             "external": "https://cixpy.github.io/html-jwt/",
             "repository": "https://github.com/cixpy/html-jwt",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/DfZT4yx9/Screenshot-4.png",
                 "alt": "A Login with a white background and a form with email and password fields"
             }
         },
@@ -129,7 +129,7 @@
             "external": "https://github.com/cixpy/Hungar",
             "repository": "https://github.com/cixpy/Hungar",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/j2vskgq/Screenshot-5.png",
                 "alt": "Hungar bot photo, with Gengar in black and without background"
             }
         },
@@ -139,7 +139,7 @@
             "external": "https://meus-gastos-two.vercel.app/",
             "repository": "https://github.com/cixpy/meus-gastos",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/Fbt8jSh8/Screenshot-6.png",
                 "alt": "Interface with colorful theme, with description, value, and email fields"
             }
         },
@@ -149,7 +149,7 @@
             "external": "https://github.com/cixpy/cs-sales-control",
             "repository": "https://github.com/cixpy/cs-sales-control",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/HLJx5TcC/Screenshot-7.png",
                 "alt": "Interface application, with a form with name, email, and phone fields"
             }
         },
@@ -159,7 +159,7 @@
             "external": "https://gym-cix.vercel.app",
             "repository": "https://github.com/cixpy/gym-cix",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/27gFS5d5/Screenshot-8.png",
                 "alt": "A website developed for a fictitious gym"
             }
         },
@@ -169,7 +169,7 @@
             "external": "https://cixtema.vercel.app",
             "repository": "https://github.com/cixpy/cixtema",
             "image": {
-                "url": "https://picsum.photos/1600/900",
+                "url": "https://i.ibb.co/4gtNSLf5/Screenshot-9.png",
                 "alt": "A website developed for customer registrations"
             }
         }
