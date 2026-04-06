@@ -1,7 +1,7 @@
 {
     "aboutMe": {
         "title": {
-            "default": "Hello, I'm",
+            "default": "Hello, I'm Gabriel",
             "bold": "Cix"
         },
         "description": "Linux-inspired full-stack developer focused on TypeScript, Node.js, and Python.",
@@ -108,6 +108,7 @@
             "slug": "csharp-project",
             "name": "CRUD in C# Windows Forms",
             "description": "A desktop CRUD system built to manage sales records in Windows Forms.",
+            "external": "https://github.com/cixpy/Hungar",
             "repository": "https://github.com/cixpy/cs-sales-control",
             "image": {
                 "url": "https://i.ibb.co/HLJx5TcC/Screenshot-7.png",
