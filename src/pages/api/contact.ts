@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     try {
         const { error } = await resend.emails.send({
             from: 'devcix <onboarding@resend.dev>',
-            to: 'contato@devcix.com',
+            to: 'gabrielviniciodacosta@gmail.com',
             subject: `Portfolio contact from ${name}`,
             replyTo: email,
             html: `
