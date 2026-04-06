@@ -110,7 +110,7 @@ const Experiences = () => {
                         transition={{ delay: 0.15, duration: 0.5 }}
                         className="mb-12"
                     >
-                        <Terminal title="devcix@zsh:~/experiences">
+                        <Terminal title="devcix@tech:~/experiences">
                             <div className="space-y-2">
                                 <PromptLine command="whoami" delay={0.15} />
                                 <div className="ml-4 text-dracula-comment">devcix</div>

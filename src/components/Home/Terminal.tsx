@@ -6,7 +6,7 @@ interface TerminalProps {
     children: ReactNode;
 }
 
-export const Terminal = ({ title = 'devcix@zsh:~', children }: TerminalProps) => {
+export const Terminal = ({ title = 'devcix@tech:~', children }: TerminalProps) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}

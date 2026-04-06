@@ -54,7 +54,7 @@ const Skills = () => {
                         transition={{ delay: 0.2, duration: 0.6 }}
                         className="mb-12"
                     >
-                        <Terminal title="devcix@zsh:~/skills">
+                        <Terminal title="devcix@tech:~/skills">
                             <div className="space-y-2">
                                 <PromptLine command="ls -la skills/" delay={0.2} />
                                 <div className="ml-4 text-dracula-comment text-sm space-y-1">

@@ -29,7 +29,7 @@ export const Header = () => {
                 <Link href="/" className="flex items-center gap-3">
                     <Image src="/favicon.svg" width={44} height={44} alt="Gabriel Cix logo" className="transition-transform duration-300 hover:scale-110" />
                     <div className="hidden sm:block">
-                        <p className="text-xs uppercase tracking-[0.35em] text-dracula-cyan">devcix@zsh</p>
+                        <p className="text-xs uppercase tracking-[0.35em] text-dracula-cyan">devcix@tech</p>
                         <p className="text-xs text-dracula-comment">~/portfolio</p>
                     </div>
                 </Link>
