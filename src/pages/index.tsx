@@ -26,7 +26,7 @@ const Home = ({ home }: HomeProps) => {
     <>
       <Head>
         <title>Home | devcix</title>
-        <meta name="description" content="Dracula terminal portfolio for devcix" />
+        <meta name="description" content="Welcome to my personal space" />
       </Head>
 
       {/* Correção: 'pdx-32' alterado para 'px-32' 
