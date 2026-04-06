@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Roboto } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
 import { Menu } from './Menu';
 import { useCallback, useState } from 'react';
 import { MenuIcon } from '@/components/icons/MenuIcon';
 
-const roboto = Roboto({
+const jetBrainsMono = JetBrains_Mono({
     subsets: ['latin'],
     weight: '500',
 });
@@ -23,19 +23,26 @@ export const Header = () => {
 
     return (
         <header
-            className={`${roboto.className} bg-h-blue-900 text-sm flex py-3 px-5 justify-between items-center sticky top-0 z-20`}
+            className={`${jetBrainsMono.className} sticky top-0 z-30 border-b border-dracula-comment/20 bg-dracula-background/80 text-sm backdrop-blur-xl`}
         >
-            <Link href="/">
-                <Image src="/favicon.svg" width={70} height={70} alt="Ícone Favicon" className="transition-transform duration-300 hover:scale-110" />
-            </Link>
-            <button className="p-1 md:hidden" onClick={openMenu}>
-                <MenuIcon className="fill-white w-10 h-10" />
-            </button>
-            <nav className="hidden md:flex items-center gap-10 text-md">
-                <Link href="/">About me</Link>
-                {/* <Link href="/portfolio">Portfolio</Link> */}
-                <Link href="/contacts">Contact</Link>
-            </nav>
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
+                <Link href="/" className="flex items-center gap-3">
+                    <Image src="/favicon.svg" width={44} height={44} alt="Gabriel Cix logo" className="transition-transform duration-300 hover:scale-110" />
+                    <div className="hidden sm:block">
+                        <p className="text-xs uppercase tracking-[0.35em] text-dracula-cyan">cix@tech</p>
+                        <p className="text-xs text-dracula-comment">~/portfolio</p>
+                    </div>
+                </Link>
+                <button className="rounded-full border border-dracula-comment/30 p-2 md:hidden" onClick={openMenu} aria-label="Open navigation menu">
+                    <MenuIcon className="h-8 w-8 fill-white" />
+                </button>
+                <nav className="hidden items-center gap-8 text-sm md:flex">
+                    <Link href="/" className="text-dracula-foreground transition-colors hover:text-dracula-cyan">Home</Link>
+                    <Link href="/experiences" className="text-dracula-foreground transition-colors hover:text-dracula-cyan">Experiences</Link>
+                    <Link href="/skills" className="text-dracula-foreground transition-colors hover:text-dracula-cyan">Skills</Link>
+                    <Link href="/contacts" className="text-dracula-foreground transition-colors hover:text-dracula-cyan">Contact</Link>
+                </nav>
+            </div>
             <Menu isVisible={isMenuOpen} onClose={closeMenu} />
         </header>
     );

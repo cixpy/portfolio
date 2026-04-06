@@ -1,16 +1,15 @@
-import React, { memo } from 'react';
+import React, { memo, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import type { Project } from '@/types/Home';
 
 interface ProjectsProps {
     projects: Project[];
 }
 
-// Separate ProjectItem into its own memoized component
-const ProjectItem = memo(({ project, index }: { project: Project; index: number }) => {
-    const { external, slug, name, image } = project;
+const ProjectItem = memo(({ project, index, isExpanded, onToggle }: { project: Project; index: number; isExpanded: boolean; onToggle: (slug: string) => void; }) => {
+    const { external, repository, slug, name, image, description } = project;
 
     return (
         <motion.li
@@ -29,43 +28,74 @@ const ProjectItem = memo(({ project, index }: { project: Project; index: number 
             }}
             className="group relative"
         >
-            <Link
-                href={external || `/projects/${slug}`}
-                target={external ? "_blank" : "_self"}
-                className="block relative rounded-xl overflow-hidden bg-dracula-current 
-                    shadow-lg transition-all duration-200 group-hover:shadow-xl 
-                    group-hover:shadow-dracula-green/20 border border-dracula-green/10"
-            >
-                <div className="relative aspect-video overflow-hidden">
-                    <Image
-                        src={image.url}
-                        alt={image.alt}
-                        fill
-                        className="object-cover transition-transform duration-300 
-                            group-hover:scale-102"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        priority={index < 2}
-                        loading={index < 2 ? "eager" : "lazy"}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dracula-background/70 to-transparent 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                </div>
-
-                <div className="p-6 relative bg-dracula-current/95">
-                    <h3 className="text-xl text-dracula-foreground font-medium mb-2 
-                        group-hover:text-dracula-green transition-colors duration-200">
-                        {name}
-                    </h3>
-
-                    <div className="absolute top-4 right-4 w-8 h-8 rounded-full 
-                        bg-gradient-to-r from-dracula-green to-dracula-green/50
-                        text-dracula-foreground flex items-center justify-center 
-                        text-sm font-medium opacity-90 group-hover:opacity-100 
-                        transition-all duration-200">
-                        {index + 1}
+            <article className="rounded-2xl overflow-hidden bg-dracula-current/70 shadow-lg transition-all duration-200 border border-dracula-comment/25 group-hover:border-dracula-cyan/40">
+                <button
+                    type="button"
+                    onClick={() => onToggle(slug)}
+                    aria-expanded={isExpanded}
+                    className="w-full text-left p-6 flex items-start justify-between gap-4"
+                >
+                    <div>
+                        <p className="linux-command text-xs mb-2">project {index + 1}</p>
+                        <h3 className="text-2xl text-dracula-foreground font-semibold">{name}</h3>
+                        <p className="mt-2 text-dracula-comment text-sm">Click to expand details and preview.</p>
                     </div>
-                </div>
-            </Link>
+                    <span className="shrink-0 rounded-full border border-dracula-comment/30 px-3 py-1 text-xs text-dracula-cyan">
+                        {isExpanded ? 'collapse' : 'expand'}
+                    </span>
+                </button>
+
+                <AnimatePresence initial={false}>
+                    {isExpanded ? (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden border-t border-dracula-comment/20"
+                        >
+                            <div className="grid gap-6 p-6 lg:grid-cols-[1.1fr_0.9fr]">
+                                <div className="space-y-4">
+                                    <p className="text-dracula-foreground/80 leading-relaxed">
+                                        {description}
+                                    </p>
+
+                                    <div className="flex flex-wrap gap-3">
+                                        <Link
+                                            href={external}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="rounded-full bg-dracula-cyan px-4 py-2 text-sm font-medium text-dracula-background transition-opacity hover:opacity-90"
+                                        >
+                                            Open live site
+                                        </Link>
+                                        <Link
+                                            href={repository}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="rounded-full border border-dracula-comment/30 px-4 py-2 text-sm font-medium text-dracula-foreground transition-colors hover:border-dracula-pink hover:text-dracula-pink"
+                                        >
+                                            Source code
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                <div className="relative overflow-hidden rounded-xl border border-dracula-comment/30 bg-transparent aspect-video">
+                                    <Image
+                                        src={image.url}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 1024px) 100vw, 40vw"
+                                        unoptimized
+                                        loading="lazy"
+                                    />
+                                </div>
+                            </div>
+                        </motion.div>
+                    ) : null}
+                </AnimatePresence>
+            </article>
         </motion.li>
     );
 });
@@ -73,8 +103,10 @@ const ProjectItem = memo(({ project, index }: { project: Project; index: number 
 ProjectItem.displayName = 'ProjectItem';
 
 export const Projects = ({ projects }: ProjectsProps) => {
+    const [expandedSlug, setExpandedSlug] = useState<string | null>(null);
+
     return (
-        <section className="py-10 px-4 md:px-8 bg-dracula-background min-h-screen">
+        <section className="py-10 px-4 md:px-8 min-h-screen">
             <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -99,18 +131,20 @@ export const Projects = ({ projects }: ProjectsProps) => {
                     }}
                     className="text-4xl sm:text-5xl text-dracula-foreground font-light mb-12 text-center"
                 >
-                    My recent{' '}
-                    <span className="font-bold text-dracula-pink bg-gradient-to-r from-dracula-pink to-dracula-green/90 bg-clip-text text-transparent">
+                    Selected{' '}
+                    <span className="font-bold text-dracula-pink bg-gradient-to-r from-dracula-pink to-dracula-cyan bg-clip-text text-transparent">
                         projects
                     </span>
                 </motion.h2>
 
-                <motion.ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <motion.ul className="grid grid-cols-1 gap-6">
                     {projects.map((project, index) => (
                         <ProjectItem
                             key={project.slug}
                             project={project}
                             index={index}
+                            isExpanded={expandedSlug === project.slug}
+                            onToggle={(slug) => setExpandedSlug((current) => current === slug ? null : slug)}
                         />
                     ))}
                 </motion.ul>

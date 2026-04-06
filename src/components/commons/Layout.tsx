@@ -15,7 +15,7 @@ export const Layout = ({ children }: LayoutProps) => {
     return (
         <div className={jetBrains_mono.className}>
             <Header />
-            {children}
+            <main>{children}</main>
         </div>
     );
 }

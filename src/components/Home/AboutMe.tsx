@@ -48,13 +48,14 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
         <motion.main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="min-h-screen flex flex-wrap-reverse justify-center items-center gap-10 md:gap-32 py-16 px-4 md:px-8"
+            className="min-h-screen flex flex-wrap-reverse justify-center items-center gap-10 md:gap-24 py-16 px-6 md:px-10"
         >
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={controls}
                 className="flex-1 flex flex-col items-center xl:items-start gap-8 min-w-[300px] max-w-2xl"
             >
+                <p className="linux-command text-sm">cat ~/profile.md</p>
                 <h1 className="text-4xl sm:text-6xl xl:text-7xl font-light text-white">
                     {title.default}{' '}
                     <motion.div
@@ -81,15 +82,14 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                     transition={{ delay: 0.5, duration: 0.5 }}
                     className="space-y-8 text-center xl:text-left"
                 >
-                    <p className={`${roboto.className} text-xl text-dracula-green leading-relaxed`}>
+                    <p className={`${roboto.className} text-xl text-dracula-foreground/80 leading-relaxed`}>
                         {description}
                     </p>
 
                     <Link
                         href={contact.link}
-                        className="inline-block px-8 py-4 bg-dracula-pink text-white text-lg rounded-lg 
-                            transition-all duration-300 hover:bg-opacity-90 hover:transform hover:-translate-y-1
-                            hover:shadow-lg"
+                        className="inline-block px-8 py-4 border border-dracula-comment/40 text-dracula-foreground text-lg rounded-lg terminal-font
+                            transition-all duration-300 hover:border-dracula-cyan/40 hover:text-dracula-cyan"
                     >
                         {contact.label}
                     </Link>
@@ -99,7 +99,7 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8, duration: 0.5 }}
-                    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 w-full max-w-3xl mt-8"
+                    className="grid grid-cols-1 sm:grid-cols-3 gap-2 w-full max-w-3xl mt-2 terminal-font text-dracula-comment text-sm"
                 >
                     {techs.map(({ tech, bgcolor, color }, index) => (
                         <motion.li
@@ -108,19 +108,12 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: index * 0.1 + 1 }}
                             whileHover={{
-                                scale: 1.1,
+                                scale: 1.04,
                                 transition: { duration: 0.2 }
                             }}
-                            className="relative group cursor-pointer"
+                            className="relative group cursor-pointer border border-dracula-comment/30 rounded-lg px-4 py-3 hover:border-dracula-cyan/40"
                         >
-                            <div
-                                style={{ backgroundColor: bgcolor, color }}
-                                className="p-3 rounded-lg shadow-lg border border-opacity-20 border-white
-                                    backdrop-blur-sm transition-all duration-300
-                                    hover:shadow-xl hover:border-opacity-50"
-                            >
-                                <span className="text-sm font-medium">{tech}</span>
-                            </div>
+                            <span>{tech}</span>
                         </motion.li>
                     ))}
                 </motion.ul>
@@ -147,7 +140,7 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 1.2, duration: 0.5 }}
-                    className="absolute -bottom-4 right-0 bg-dracula-pink text-white p-4 rounded-xl
+                    className="absolute -bottom-4 right-0 bg-dracula-pink text-white p-4 rounded-xl terminal-font
                         shadow-lg transform hover:scale-105 transition-transform duration-300"
                 >
                     <p className="font-bold text-2xl mb-1">{pfp.experience.bold}</p>

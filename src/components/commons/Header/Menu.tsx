@@ -11,29 +11,37 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
     return (
         <div
             className={`${isVisible ? 'flex' : 'hidden'}
-      fixed inset-0 w-full h-full bg-black bg-opacity-40 backdrop-blur-sm md:hidden
+      fixed inset-0 w-full h-full bg-dracula-background/50 backdrop-blur-md md:hidden
     `}
             onClick={onClose}
         >
             <div
-                className="w-full bg-dracula-background h-96 shadow-md py-4 px-5"
+                className="w-full border-b border-dracula-comment/30 bg-dracula-background/95 h-96 shadow-md py-4 px-5 linux-panel"
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="flex justify-between mb-5">
+                <div className="flex justify-between mb-5 items-center">
                     <Link href="/">
-                        <Image src="/favicon.svg" width={50} height={50} alt="Ícone do Gengar" />
+                        <Image src="/favicon.svg" width={48} height={48} alt="Gabriel Cix logo" />
                     </Link>
-                    <button onClick={onClose}>
-                        <MenuCloseIcon className="fill-white w-10 h-10" />
+                    <button onClick={onClose} aria-label="Close navigation menu">
+                        <MenuCloseIcon className="fill-white w-9 h-9" />
                     </button>
                 </div>
-                <nav className="flex flex-col gap-5 text-xl p-5 items-center">
-                    <Link href="/" onClick={onClose}>
-                        About me
+                <div className="mb-4 terminal-font text-xs text-dracula-comment">
+                    <span className="text-dracula-cyan">cix@tech</span>:<span className="text-dracula-pink">~</span>$
+                </div>
+                <nav className="flex flex-col gap-4 p-5 text-xl items-center">
+                    <Link href="/" onClick={onClose} className="text-dracula-foreground transition-colors hover:text-dracula-cyan">
+                        Home
                     </Link>
-                    {/* <Link href="/portfolio" onClick={onClose}>Portfolio</Link> */}
-                    <Link href="/contacts" onClick={onClose}>
-                        Contact me
+                    <Link href="/experiences" onClick={onClose} className="text-dracula-foreground transition-colors hover:text-dracula-cyan">
+                        Experiences
+                    </Link>
+                    <Link href="/skills" onClick={onClose} className="text-dracula-foreground transition-colors hover:text-dracula-cyan">
+                        Skills
+                    </Link>
+                    <Link href="/contacts" onClick={onClose} className="text-dracula-foreground transition-colors hover:text-dracula-cyan">
+                        Contact
                     </Link>
                 </nav>
             </div>

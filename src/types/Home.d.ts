@@ -1,4 +1,3 @@
-import { Link } from 'next/link';
 export interface Image {
   url: string;
   alt: string;
@@ -35,6 +34,8 @@ export interface Project {
   url: string;
   slug: string;
   name: string;
+  description: string;
+  repository: string;
   image: Image;
 }
 

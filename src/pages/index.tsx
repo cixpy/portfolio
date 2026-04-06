@@ -14,6 +14,10 @@ interface HomeProps {
   };
 }
 
+type RawProject = Omit<Project, 'url'> & {
+  external?: string;
+};
+
 const Home = ({ home }: HomeProps) => {
   // Desestruturação segura dos dados locais
   const { projects, aboutMe } = home;
@@ -21,8 +25,8 @@ const Home = ({ home }: HomeProps) => {
   return (
     <>
       <Head>
-        <title>Home | Cix</title>
-        <meta name="description" content="Sou um dev full stack" />
+        <title>Home | devcix</title>
+        <meta name="description" content="Dracula terminal portfolio for devcix" />
       </Head>
 
       {/* Correção: 'pdx-32' alterado para 'px-32' 
@@ -41,9 +45,9 @@ const Home = ({ home }: HomeProps) => {
  * Isso elimina a necessidade de APIs externas e melhora a velocidade de build.
  */
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
-  const transformedProjects = homeData.projects.map((project) => ({
+  const transformedProjects: Project[] = (homeData.projects as RawProject[]).map((project) => ({
     ...project,
-    url: project.external,
+    url: project.external ?? project.repository,
   }));
 
   return {
