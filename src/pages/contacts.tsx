@@ -53,7 +53,7 @@ const Contacts = () => {
                     </div>
 
                     <div className="mb-10">
-                        <Terminal title="cix@tech:~/contacts">
+                        <Terminal title="devcix@zsh:~/contacts">
                             <div className="space-y-2">
                                 <PromptLine command="ls -la contacts/" delay={0.1} />
                                 <div className="ml-4 text-dracula-comment text-sm">email.md linkedin.md github.md instagram.md</div>

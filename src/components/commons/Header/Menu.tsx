@@ -28,7 +28,7 @@ export const Menu = ({ isVisible, onClose }: MenuProps) => {
                     </button>
                 </div>
                 <div className="mb-4 terminal-font text-xs text-dracula-comment">
-                    <span className="text-dracula-cyan">cix@tech</span>:<span className="text-dracula-pink">~</span>$
+                    <span className="text-dracula-cyan">devcix@zsh</span>:<span className="text-dracula-pink">~</span>$
                 </div>
                 <nav className="flex flex-col gap-4 p-5 text-xl items-center">
                     <Link href="/" onClick={onClose} className="text-dracula-foreground transition-colors hover:text-dracula-cyan">
