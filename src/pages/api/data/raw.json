@@ -1,0 +1,130 @@
+{
+    "aboutMe": {
+        "title": {
+            "default": "Hello, I'm Gabriel",
+            "bold": "Cix"
+        },
+        "description": "fullstack developer",
+        "contact": {
+            "link": "/contacts",
+            "label": "Contact me"
+        },
+        "techs": [
+            {
+                "tech": "TypeScript",
+                "color": "#f8f8f2",
+                "bgcolor": "#3178c6"
+            },
+            {
+                "tech": "Node.js",
+                "color": "#f8f8f2",
+                "bgcolor": "#6272a4"
+            },
+            {
+                "tech": "Python",
+                "color": "#282a36",
+                "bgcolor": "#f1fa8c"
+            }
+        ],
+        "pfp": {
+            "image": {
+                "url": "https://avatars.githubusercontent.com/u/102544926?v=4",
+                "alt": "devcix profile picture"
+            },
+            "experience": {
+                "default": "exp",
+                "bold": "3y+"
+            }
+        }
+    },
+    "projects": [
+        {
+            "slug": "pokedex",
+            "name": "Pokédex",
+            "description": "A Pokédex experience with animated cards and a clean search flow.",
+            "external": "https://pokedex.devcix.com/",
+            "repository": "https://github.com/cixpy/pokedex",
+            "image": {
+                "url": "https://i.ibb.co/ycfCGw4x/Screenshot-2.png",
+                "alt": "Pokédex interface"
+            }
+        },
+        {
+            "slug": "todo-list",
+            "name": "TODO List",
+            "description": "A task manager focused on speed, clarity, and daily planning.",
+            "external": "https://todo.devcix.com",
+            "repository": "https://github.com/cixpy/todolistmvc",
+            "image": {
+                "url": "https://i.ibb.co/6VvQFcH/Screenshot-3.png",
+                "alt": "Task list interface"
+            }
+        },
+        {
+            "slug": "auth-jwt",
+            "name": "Auth JWT",
+            "description": "A small authentication demo showing JWT login and protected access.",
+            "external": "https://cixpy.github.io/html-jwt/",
+            "repository": "https://github.com/cixpy/html-jwt",
+            "image": {
+                "url": "https://i.ibb.co/DfZT4yx9/Screenshot-4.png",
+                "alt": "Authentication form interface"
+            }
+        },
+        {
+            "slug": "hungar-bot-discord",
+            "name": "Hungar - Discord Bot",
+            "description": "A Discord bot built to automate server interactions and utility commands.",
+            "external": "https://github.com/cixpy/Hungar",
+            "repository": "https://github.com/cixpy/Hungar",
+            "image": {
+                "url": "https://i.ibb.co/j2vskgq/Screenshot-5.png",
+                "alt": "Discord bot visual identity"
+            }
+        },
+        {
+            "slug": "my-expenses-flash",
+            "name": "My Expenses - Flask",
+            "description": "A Flask budget tracker for logging income, expenses, and monthly totals.",
+            "external": "https://gastos.devcix.com/",
+            "repository": "https://github.com/cixpy/meus-gastos",
+            "image": {
+                "url": "https://i.ibb.co/Fbt8jSh8/Screenshot-6.png",
+                "alt": "Expense tracking interface"
+            }
+        },
+        {
+            "slug": "gym-cix",
+            "name": "Gym Cix - Website",
+            "description": "A landing page for a fictional gym with a marketing-first structure.",
+            "external": "https://gym.devcix.com",
+            "repository": "https://github.com/cixpy/gym-cix",
+            "image": {
+                "url": "https://i.ibb.co/27gFS5d5/Screenshot-8.png",
+                "alt": "Gym website mockup"
+            }
+        },
+        {
+            "slug": "cixtema-customer-web-system",
+            "name": "Cixtema - Customer Web System",
+            "description": "A customer registration system with a streamlined admin workflow.",
+            "external": "https://cixtema.devcix.com",
+            "repository": "https://github.com/cixpy/cixtema",
+            "image": {
+                "url": "https://i.ibb.co/4gtNSLf5/Screenshot-9.png",
+                "alt": "Customer management interface"
+            }
+        },
+        {
+            "slug": "bc-tax-management-website",
+            "name": "B&C Tax Management - Website",
+            "description": "A landing page for a tax management company, focused on clear service presentation.",
+            "external": "https://bctributaria.com.br",
+            "repository": "https://github.com/cixpy/",
+            "image": {
+                "url": "https://i.ibb.co/wF8XVVsn/Screenshot-2.png",
+                "alt": "B&C Tax Management mockup"
+            }
+        }
+    ]
+}
