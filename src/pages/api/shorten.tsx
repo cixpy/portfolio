@@ -17,7 +17,7 @@ const connectDB = async () => {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://cixpy.github.io, http://127.0.0.1:5500/');
+    res.setHeader('Access-Control-Allow-Origin', 'https://cixpy.github.io, http://127.0.0.1:5500');
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
