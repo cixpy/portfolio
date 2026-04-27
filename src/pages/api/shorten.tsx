@@ -17,7 +17,14 @@ const connectDB = async () => {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    res.setHeader('Access-Control-Allow-Origin', 'https://cixpy.github.io, http://127.0.0.1:5500');
+    const allowedOrigins = ['https://cixpy.github.io', 'http://127.0.0.1:5500'];
+    const origin = req.headers.origin;
+
+    if (origin && allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+        res.setHeader('Vary', 'Origin');
+    }
+
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
