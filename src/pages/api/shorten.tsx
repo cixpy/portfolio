@@ -17,7 +17,7 @@ const connectDB = async () => {
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const allowedOrigins = ['https://cixpy.github.io', 'http://127.0.0.1:5500'];
+    const allowedOrigins = ['https://cixpy.github.io', 'http://127.0.0.1:5500', 'https://encurta.devcix.com'];
     const origin = req.headers.origin;
 
     if (origin && allowedOrigins.includes(origin)) {
