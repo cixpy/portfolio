@@ -94,6 +94,17 @@
             }
         },
         {
+            "slug": "link-shortener",
+            "name": "Link Shortener",
+            "description": "A simple and efficient link shortener.",
+            "external": "https://encurta.devcix.com/",
+            "repository": "https://github.com/cixpy/encurtador",
+            "image": {
+                "url": "xxxxxxxxxxxxx",
+                "alt": "Link shortener interface"
+            }
+        },
+        {
             "slug": "gym-cix",
             "name": "Gym Cix - Website",
             "description": "A landing page for a fictional gym with a marketing-first structure.",
