@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 type YTPlayer = {
     playVideo: () => void;
@@ -45,15 +45,18 @@ export const MusicPlayer = () => {
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
 
-    const stopProgressTimer = () => {
+    const stopProgressTimer = useCallback(() => {
         if (progressTimerRef.current) {
             clearInterval(progressTimerRef.current);
             progressTimerRef.current = null;
         }
-    };
+    }, []);
 
-    const startProgressTimer = () => {
-        stopProgressTimer();
+    const startProgressTimer = useCallback(() => {
+        if (progressTimerRef.current) {
+            clearInterval(progressTimerRef.current);
+            progressTimerRef.current = null;
+        }
         progressTimerRef.current = setInterval(() => {
             if (!playerRef.current) {
                 return;
@@ -64,7 +67,7 @@ export const MusicPlayer = () => {
             setCurrentTime(nextCurrentTime);
             setDuration(nextDuration);
         }, 500);
-    };
+    }, []);
 
     useEffect(() => {
         const createPlayer = () => {
@@ -140,7 +143,7 @@ export const MusicPlayer = () => {
                 playerRef.current = null;
             }
         };
-    }, []);
+    }, [startProgressTimer, stopProgressTimer]);
 
     const togglePlayback = () => {
         if (!playerRef.current || !isReady) {

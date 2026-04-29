@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
   images: {
     formats: ['image/avif', 'image/webp'],
-    minimumCacheTTL: 60,
+    // 30 days — prevents re-validation of optimized images on every page visit
+    minimumCacheTTL: 2592000,
     remotePatterns: [
       {
         protocol: 'https',

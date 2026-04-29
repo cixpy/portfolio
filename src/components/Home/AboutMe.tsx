@@ -1,13 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Roboto } from 'next/font/google';
 import { AboutMe as TAboutMe } from '@/types/Home';
-
-const roboto = Roboto({
-    subsets: ['latin'],
-    weight: ['400', '700'],
-    display: 'swap',
-});
 
 interface AboutMeProps {
     aboutMe: TAboutMe;
@@ -41,7 +34,7 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                 </h1>
 
                 <div className="space-y-6 text-center xl:text-left animate-fade-in-up" style={{ animationDelay: '0.25s' }}>
-                    <p className={`${roboto.className} text-xl text-dracula-foreground/80 leading-relaxed`}>
+                    <p className="text-xl text-dracula-foreground/80 leading-relaxed">
                         {description}
                     </p>
 
@@ -86,7 +79,6 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                         className="object-cover"
                         sizes="(max-width: 640px) 280px, 400px"
                         priority
-                        fetchPriority="high"
                     />
                 </div>
 
