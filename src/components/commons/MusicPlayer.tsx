@@ -237,5 +237,6 @@ export const MusicPlayer = () => {
                     </label>
                 </div>
             </div>
-            );
+        </>
+    );
 };
