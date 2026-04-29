@@ -10,6 +10,8 @@ interface LayoutProps {
 const jetBrains_mono = JetBrains_Mono({
     subsets: ['latin'],
     weight: '500',
+    display: 'swap',
+    variable: '--font-jetbrains-mono',
 });
 
 const MusicPlayer = dynamic(
@@ -30,22 +32,23 @@ export const Layout = ({ children }: LayoutProps) => {
         };
 
         if (win.requestIdleCallback) {
-            const callbackId = win.requestIdleCallback(schedulePlayer, { timeout: 1500 });
+            const callbackId = win.requestIdleCallback(schedulePlayer, { timeout: 2000 });
 
             return () => {
                 win.cancelIdleCallback?.(callbackId);
             };
         }
 
-        const timeoutId = globalThis.setTimeout(schedulePlayer, 600);
+        // Fallback: defer past the LCP event before injecting the YouTube API script
+        const timeoutId = globalThis.setTimeout(schedulePlayer, 2000);
         return () => globalThis.clearTimeout(timeoutId);
     }, []);
 
     return (
-        <div className={jetBrains_mono.className}>
+        <div className={`${jetBrains_mono.variable} ${jetBrains_mono.className}`}>
             <Header />
             <main>{children}</main>
             {shouldRenderPlayer ? <MusicPlayer /> : null}
         </div>
     );
-}
+}

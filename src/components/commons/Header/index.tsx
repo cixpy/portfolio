@@ -1,14 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { JetBrains_Mono } from 'next/font/google';
 import { Menu } from './Menu';
 import { useCallback, useState } from 'react';
 import { MenuIcon } from '@/components/icons/MenuIcon';
-
-const jetBrainsMono = JetBrains_Mono({
-    subsets: ['latin'],
-    weight: '500',
-});
 
 export const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +17,7 @@ export const Header = () => {
 
     return (
         <header
-            className={`${jetBrainsMono.className} sticky top-0 z-30 border-b border-dracula-comment/20 bg-dracula-background/90 text-sm backdrop-blur-sm md:bg-dracula-background/80 md:backdrop-blur-xl`}
+            className="sticky top-0 z-30 border-b border-dracula-comment/20 bg-dracula-background/90 text-sm backdrop-blur-sm md:bg-dracula-background/80 md:backdrop-blur-xl"
         >
             <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8">
                 <Link href="/" className="flex items-center gap-3">

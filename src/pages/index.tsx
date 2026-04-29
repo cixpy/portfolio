@@ -58,7 +58,7 @@ const Home = ({ home }: HomeProps) => {
 
   return (
     <>
-      <Seo title="Home | devcix" description="Welcome to my personal space" path="/" />
+      <Seo title="Home | devcix" description="Gabriel Cix — fullstack developer specializing in TypeScript, Node.js and Python. Explore projects, skills and work experience." path="/" />
 
       {/* Correção: 'pdx-32' alterado para 'px-32' 
           Estrutura de espaçamento vertical e horizontal 

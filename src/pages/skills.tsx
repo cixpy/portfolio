@@ -47,7 +47,7 @@ const Skills = () => {
 
     return (
         <>
-            <Seo title="Skills | devcix" description="Primary technologies used by devcix" path="/skills" />
+            <Seo title="Skills | devcix" description="Technologies kept in active use by Gabriel Cix — TypeScript, Node.js, and Python. A practical overview of the stack behind real-world projects." path="/skills" />
 
             <div className="min-h-screen linux-shell-bg py-12 md:py-24">
                 <div className="max-w-6xl mx-auto px-6 md:px-8">

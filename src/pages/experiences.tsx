@@ -86,7 +86,7 @@ const Experiences = () => {
         <>
             <Seo
                 title="Experiences | devcix"
-                description="Professional and academic experience timeline for devcix"
+                description="Work and education history of Gabriel Cix — from IT support and WordPress freelance work to fullstack development. Timeline from 2022 to present."
                 path="/experiences"
             />
 

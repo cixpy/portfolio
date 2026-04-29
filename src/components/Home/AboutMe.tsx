@@ -6,6 +6,7 @@ import { AboutMe as TAboutMe } from '@/types/Home';
 const roboto = Roboto({
     subsets: ['latin'],
     weight: ['400', '700'],
+    display: 'swap',
 });
 
 interface AboutMeProps {
@@ -85,6 +86,7 @@ export const AboutMe = ({ aboutMe }: AboutMeProps) => {
                         className="object-cover"
                         sizes="(max-width: 640px) 280px, 400px"
                         priority
+                        fetchPriority="high"
                     />
                 </div>
 

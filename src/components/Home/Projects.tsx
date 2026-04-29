@@ -88,6 +88,8 @@ const ProjectItem = memo(({ project, index, isExpanded, onToggle }: { project: P
                                         className="object-cover"
                                         sizes="(max-width: 1024px) 100vw, 40vw"
                                         loading="lazy"
+                                        placeholder="blur"
+                                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
                                     />
                                 </div>
                             </div>

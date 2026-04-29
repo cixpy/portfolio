@@ -40,7 +40,11 @@ const Contacts = () => {
 
     return (
         <>
-            <Seo title="Contact | devcix" description="Contact links for devcix" path="/contacts" />
+            <Seo
+                title="Contact | devcix"
+                description="Get in touch with Gabriel Cix — fullstack developer. Reach out via email, LinkedIn, GitHub, or send a direct message through the contact form."
+                path="/contacts"
+            />
             <div className="min-h-screen linux-shell-bg py-12 md:py-24">
                 <div className="max-w-6xl mx-auto px-6 md:px-8">
                     <div className="mb-16">
@@ -63,7 +67,10 @@ const Contacts = () => {
                         <li className="linux-panel p-5 rounded-2xl border border-dracula-comment/30">
                             <span className="font-bold terminal-font text-dracula-foreground">Email</span>
                             <div className="flex gap-1 md:gap-3 items-center mt-3">
-                                <a href="mailto:contato@devcix.com" className="text-sm md:text-lg text-dracula-foreground underline truncate" target="_blank">
+                                <a
+                                    href="mailto:contato@devcix.com"
+                                    className="text-sm md:text-lg text-dracula-foreground underline truncate"
+                                >
                                     contato@devcix.com
                                 </a>
                                 <CopyButton textToCopy="contato@devcix.com" />
@@ -72,7 +79,12 @@ const Contacts = () => {
                         <li className="linux-panel p-5 rounded-2xl border border-dracula-comment/30">
                             <span className="font-bold terminal-font text-dracula-foreground">LinkedIn</span>
                             <div className="flex gap-1 md:gap-3 items-center mt-3">
-                                <a href="https://linkedin.com/in/cixayah" target="_blank" className="text-sm md:text-lg text-dracula-foreground underline truncate">
+                                <a
+                                    href="https://linkedin.com/in/cixayah"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm md:text-lg text-dracula-foreground underline truncate"
+                                >
                                     https://linkedin.com/in/cixayah
                                 </a>
                             </div>
@@ -80,7 +92,12 @@ const Contacts = () => {
                         <li className="linux-panel p-5 rounded-2xl border border-dracula-comment/30">
                             <span className="font-bold terminal-font text-dracula-foreground">GitHub</span>
                             <div className="flex gap-1 md:gap-3 items-center mt-3">
-                                <a href="https://github.com/cixpy" target="_blank" className="text-sm md:text-lg text-dracula-foreground underline truncate">
+                                <a
+                                    href="https://github.com/cixpy"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm md:text-lg text-dracula-foreground underline truncate"
+                                >
                                     https://github.com/cixpy
                                 </a>
                             </div>
@@ -88,7 +105,12 @@ const Contacts = () => {
                         <li className="linux-panel p-5 rounded-2xl border border-dracula-comment/30">
                             <span className="font-bold terminal-font text-dracula-foreground">Instagram</span>
                             <div className="flex gap-1 md:gap-3 items-center mt-3">
-                                <a href="https://instagram.com/devcix" target="_blank" className="text-sm md:text-lg text-dracula-foreground underline truncate">
+                                <a
+                                    href="https://instagram.com/devcix"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-sm md:text-lg text-dracula-foreground underline truncate"
+                                >
                                     https://instagram.com/devcix
                                 </a>
                             </div>
@@ -102,6 +124,7 @@ const Contacts = () => {
                                 Name
                                 <input
                                     required
+                                    maxLength={100}
                                     value={name}
                                     onChange={(event) => setName(event.target.value)}
                                     className="mt-2 w-full rounded-lg border border-dracula-comment/40 bg-transparent px-3 py-2 text-dracula-foreground outline-none focus:border-dracula-cyan/50"
@@ -113,6 +136,7 @@ const Contacts = () => {
                                 <input
                                     required
                                     type="email"
+                                    maxLength={254}
                                     value={email}
                                     onChange={(event) => setEmail(event.target.value)}
                                     className="mt-2 w-full rounded-lg border border-dracula-comment/40 bg-transparent px-3 py-2 text-dracula-foreground outline-none focus:border-dracula-cyan/50"
@@ -124,6 +148,7 @@ const Contacts = () => {
                             Message
                             <textarea
                                 required
+                                maxLength={3000}
                                 value={message}
                                 onChange={(event) => setMessage(event.target.value)}
                                 rows={5}
