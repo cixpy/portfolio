@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+# Short-URL redirect routes — no indexable content
+Disallow: /s/
 
 Sitemap: https://devcix.com/sitemap.xml
