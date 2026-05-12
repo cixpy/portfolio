@@ -10,8 +10,8 @@ html,
 body {
   min-height: 100%;
   background:
-    radial-gradient(circle at top left, rgba(189, 147, 249, 0.08), transparent 34%),
-    radial-gradient(circle at top right, rgba(139, 233, 253, 0.06), transparent 32%),
+    radial-gradient(circle at top left, #bd93f914, transparent 34%),
+    radial-gradient(circle at top right, #8be9fd0f, transparent 32%),
     linear-gradient(180deg, #1f212b 0%, #262936 58%, #282a36 100%);
   color: #f8f8f2;
 }
@@ -27,7 +27,7 @@ body {
 
   .linux-panel {
     backdrop-filter: blur(8px);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 14px 40px #00000033;
   }
 
   .animate-marquee-left {
@@ -36,7 +36,7 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 233, 253, 0.3);
+  background: #8be9fd4d;
   color: #f8f8f2;
 }
 
@@ -60,14 +60,14 @@ body {
 
   .linux-shell-bg {
     background:
-      radial-gradient(circle at top, rgba(68, 71, 90, 0.18), transparent 48%),
-      linear-gradient(180deg, rgba(31, 33, 43, 0.92), rgba(40, 42, 54, 0.96));
+      radial-gradient(circle at top, #44475a2e, transparent 48%),
+      linear-gradient(180deg, #1f212beb, #282a36f5);
   }
 
   .linux-panel {
-    background: rgba(40, 42, 54, 0.76);
-    border: 1px solid rgba(98, 114, 164, 0.35);
-    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+    background: #282a36c2;
+    border: 1px solid #6272a459;
+    box-shadow: 0 24px 80px #0000003d;
     backdrop-filter: blur(14px);
   }
 
